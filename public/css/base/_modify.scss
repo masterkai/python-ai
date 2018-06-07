@@ -1,0 +1,41 @@
+.TOP{
+
+  .WRAPPER {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    @include breakpoint(max-width 768px){
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .empty {
+      @include breakpoint(max-width 768px){
+        display: none;
+      }
+    }
+    .mainCopyGroup {
+      flex-basis: 50%;
+      @include breakpoint(769px 1200px){
+        margin-top: 60px;
+        align-self: flex-start;
+      }
+      @include breakpoint(max-width 768px){
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+h4.mainTitle, h3.mainTitle {
+  font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+h6 {
+  font-size: 1.4375rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}

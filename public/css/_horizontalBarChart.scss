@@ -1,0 +1,66 @@
+$ipad: max-width 768px;
+.horizonalBarChart {
+  background: url(../images/bg02.png) repeat fixed;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: #dddddd;
+  height: auto;
+
+  .catagoryBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    @include breakpoint(max-width 991px){
+      flex-direction: row;
+      align-items: stretch;
+    }
+    @include breakpoint($ipad){
+      flex-wrap: wrap;
+    }
+    a {
+      color: #5b5b5b;
+      //background-color: #c9c9c9;
+      text-align: center;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #acacac;
+      span.hideout {
+        display: inline-block;
+        @include breakpoint($ipad){
+          display: none;
+        }
+      }
+      &.active {
+        font-weight: 600;
+        letter-spacing: 1px;
+        background-color: $Color--orange;
+        border: 1px solid $Color--orange;
+        color: #fff;
+      }
+      @include breakpoint($ipad){
+        flex: 1 1 33.33%;
+        padding: 5px;
+        font-size: .85rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+    }
+  }
+  .horizonalBarCharts {
+    padding: 10px 20px;
+    img {
+      background-color: #fff;
+
+    }
+  }
+  h4 {
+    margin-top: 10px;
+  }
+}
+.d-flex {
+  display: flex;
+}
